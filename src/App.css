@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: white;
+  background-color: lightseagreen;
   min-height: 33vh;
   display: flex;
   flex-direction: column;
@@ -51,4 +51,18 @@ ul, .objectives {
 
 li {
   list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(6, 240, 45);
+  padding: 10px;
+  margin: 5px;
+  
+}
+
+.NavigationBar {
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
 }

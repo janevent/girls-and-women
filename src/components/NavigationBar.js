@@ -4,11 +4,11 @@ import { Link, BrowserRouter as Router } from 'react-router-dom';
 export default function NavigationBar(){
 
     return(
-        <div>
+        <nav className="NavigationBar">
            
-                <Link to="/description" ></Link>
-                <Link to="/donate"></Link>
+                <Link className="link" to="/description" >Campaign</Link>
+                <Link className="link" to="/">Donate</Link>
             
-        </div>
+        </nav>
     )
 }

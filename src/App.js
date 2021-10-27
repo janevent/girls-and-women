@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import NavigationBar from './components/NavigationBar';
 import Description from './components/Description';
+import Donate from './components/Donate';
+
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
@@ -19,6 +21,9 @@ function App() {
             <Route path="/description">
                 <Description/>
             </Route> 
+            <Route path="/">
+                <Donate/>
+            </Route>
           </Switch>
         </Router>
       </div>
