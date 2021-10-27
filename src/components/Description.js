@@ -1,15 +1,19 @@
 import React from 'react';
+import {useState} from 'react';
+
+import challenges from '../info/challenges.js';
 
 export default function Description(){
 
-    [title] = useState("Donations go to KWECHIPA");
-    [paragraph1, updateParagraph1] = useState("text");
+    
+    [subTitle] = useState("Donations go to KAWEECHIPA");
+    [paragraph1, updateParagraph1] = useState(challenges);
     [paragraph2, updateParagraph2] = useState("text");
     [image1, updateImage1] = useState("image");
 
     return (
         <div className="Description">
-            
+            <p>{paragraph1}</p>
         </div>
     )
 
