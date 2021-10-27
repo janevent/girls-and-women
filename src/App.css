@@ -66,3 +66,30 @@ li {
   flex-direction: row;
   background-color: lightblue;
 }
+
+.arrow {
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.increase, .decrease {
+  border-radius: 50%;
+}
+
+.submitAmount {
+  border-radius: 5%;
+  font-weight: bold;
+  font-size: 1.5em;
+}
