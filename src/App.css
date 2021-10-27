@@ -43,3 +43,12 @@ p{
   margin: 15px;
   padding: 25px;  
 }
+
+ul, .objectives {
+  text-align: center;
+  margin: auto;
+}
+
+li {
+  list-style-type: none;
+}
