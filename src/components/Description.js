@@ -30,6 +30,10 @@ export default function Description(){
                     {objectives.map(ob => <li>{ob}</li>)}
                 </ul>          
             </div>
+            <div className="where">
+                <p>This project will be implemented in the Buganda region located in Central Uganda on the
+shores of Lake Victoria.</p>
+            </div>
         </div>
     )
 
