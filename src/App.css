@@ -72,15 +72,16 @@
 .Amount p {
   font-size: 2em;
   font-weight: 500;
+  color: steelblue;
 }
 
-.Amount button{
+/*.Amount button{
   border-radius: 50%;
   border-width: 1.5px;
   border-style: inset;
   border-color: steelblue;
   color: steelblue;
-}
+}*/
 
 
 
@@ -125,7 +126,7 @@ li {
 }
 
 .arrow {
-  border: solid black;
+  border: solid steelblue;
   border-width: 0 4px 4px 0;
   display: inline-block;
   padding: 5px;
@@ -143,10 +144,24 @@ li {
 
 .increase, .decrease {
   border-radius: 50%;
+  border-width: 4px;
+  border-color: steelblue;
+  background: linear-gradient(pink, white, pink);
+}
+
+.Amount{
+  color: steelblue;
+  font-size:  1.5em;
 }
 
 .submitAmount {
-  border-radius: 5%;
+  border-style: ridge;
+  border-radius: 10px;
+  border-width: 4px;
+  border-color: steelblue;
+  background: linear-gradient(to bottom, lightblue, lightgreen);
+  padding: 5px;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.25em;
+  color: steelblue;
 }
