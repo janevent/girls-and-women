@@ -11,7 +11,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <section className="inner-header">  
+          <section className="inner-header-1">
             <h1>Menstrual Hygeine Campaign</h1>
+          </section>
         </section>
         
       </header>

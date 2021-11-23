@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: lightseagreen;
+  background: linear-gradient(to bottom, lightseagreen, rgb(9, 253, 82) );
   /*background-color: linear-gradient(darkgreen, transparent);*/
   min-height: 85vh;
   display: flex;
@@ -26,33 +26,72 @@
   font-weight: 100;
   color: rgb(195, 242, 250);
   border-radius: 0 0 0 90%/ 0 0 0 90%;
+  border-bottom-style: ridge;
+  border-color: rgba(9, 253, 82, 0.6);
+  border-block-end-width: 26px;
 }
 
 .inner-header {
-  border-bottom-style: solid;
+  /*border-bottom-style:ridge;
  /* border-left-style: solid;*/
-  border-bottom-color: rgba(244, 247, 248, 0.6);
+  border-bottom-color: rgba(96, 229, 247, 0.5);
+  border-right-color: rgba(96, 229, 247, 0.4);
   
-  border-width: 20px;
-  border-radius: 20% 80% 90% 90%/20% 80% 90% 90%;
+  border-width: 15px;
+  border-block-end-style: ridge;
+ /* border-block-end-width: 20px;*/
+  border-radius: 0 90% 100% 100%/0 90% 90% 100%;
   margin: 0;
   padding: 200px;
   
   
   /*background-image: /*linear-gradient(to-right, transparent, lightseagreen),linear-gradient(lightseagreen, rgba(82, 214, 247, 0.5));*/
-  background-color: rgba(5, 172, 194, 0.6) 
+  /*background-image: linear-gradient(to bottom, transparent, rgba(31, 194, 248, 0.8) );*/
+}
+
+.inner-header-1 {
+  border-bottom-color: rgba(96, 229, 247, 0.35);
+  border-right-color: rgba(96, 229, 247, 0.35);
+  
+  border-width: 6px;
+ /* border-block-end-style: ridge;*/
+  padding: 5px 175px 50px 175px;
+  border-radius: 0 0 100% 100%/ 0 0 100% 100%;
+}
+
+.Donate {
+  padding: 100px;
+  margin-top: 40px;
+  border-block-start-style: ridge;
+  border-top-color: rgba(96, 229, 247, 0.35);
+  border-radius: 90% 0 0 0/ 90% 0 0 0;
+  border-width: 20px;
+  background: linear-gradient(to bottom, skyblue, rgb(9, 253, 82));
+}
+
+.Amount p {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.Amount button{
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: inset;
+  border-color: steelblue;
+  color: steelblue;
 }
 
 
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 p{
   margin: 15px;
