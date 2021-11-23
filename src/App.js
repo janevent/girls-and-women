@@ -10,7 +10,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Menstrual Hygeine Campaign</h1>
+        <section className="inner-header">  
+            <h1>Menstrual Hygeine Campaign</h1>
+        </section>
         
       </header>
 
