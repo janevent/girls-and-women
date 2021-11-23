@@ -4,11 +4,17 @@ import { Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+
+
+const stripe = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY)
 
 ReactDOM.render(
   <React.StrictMode>
-    
+    <Elements stripe={stripe}>
       <App />
+    </Elements>
     
   </React.StrictMode>,
   document.getElementById('root')
