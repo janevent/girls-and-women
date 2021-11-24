@@ -66,7 +66,7 @@
   border-top-color: rgba(96, 229, 247, 0.35);
   border-radius: 90% 0 0 0/ 90% 0 0 0;
   border-width: 20px;
-  background: linear-gradient(to bottom, skyblue, rgb(9, 253, 82));
+  background: linear-gradient(to bottom left,rgb(9, 253, 82), skyblue);
 }
 
 .Amount p {
@@ -121,7 +121,7 @@ li {
 .NavigationBar {
   display: flex;
   flex-direction: row;
-  background-color: linear-gradient(lightblue, transparent);
+  background: linear-gradient(to right, yellow, 66%, white);
   border-radius: -50% -50% 0 0/ -50% -50% 0 0;
 }
 
@@ -146,7 +146,7 @@ li {
   border-radius: 50%;
   border-width: 4px;
   border-color: steelblue;
-  background: linear-gradient(pink, white, pink);
+  background: linear-gradient(to bottom right, lightblue, white);
 }
 
 .Amount{
@@ -159,7 +159,7 @@ li {
   border-radius: 10px;
   border-width: 4px;
   border-color: steelblue;
-  background: linear-gradient(to bottom, lightblue, lightgreen);
+  background: linear-gradient(to bottom right, lightblue, white);
   padding: 5px;
   font-weight: bold;
   font-size: 1.25em;
@@ -176,7 +176,7 @@ li {
 
 .Modal{
   position: fixed;
-  width: 80%;
+  width: 70%;
   height: auto;
   top: 50%;
   left: 50%;
