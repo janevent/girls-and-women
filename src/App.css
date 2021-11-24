@@ -165,3 +165,32 @@ li {
   font-size: 1.25em;
   color: steelblue;
 }
+
+.display-block{
+  display: block;
+}
+
+.display-none{
+  display: none;
+}
+
+.Modal{
+  position: fixed;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 10px;
+  background: white;
+  padding: 20px;
+}
+
+.Modal button{
+  border-radius: 5px;
+  font-size: 1.5;
+  border-style: ridge;
+  background: linear-gradient(to bottom right,white, grey);
+
+}
