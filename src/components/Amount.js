@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 export default function Amount({amount, onIncreaseAmount, onSubmitAmount, onDecreaseAmount}){
+
+    
+
     return(
         <div className="Amount">
             <h2>Amount To Donate</h2>
