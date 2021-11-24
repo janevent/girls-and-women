@@ -23,7 +23,7 @@ export default function Donate(props){
         console.log('onSubmitAmount', amount)
         setDisplay(true);
         console.log('display', display)
-        alert("Thank you for your Donation");
+        //alert("Thank you for your Donation");
         //history.push('/description');
         
     }

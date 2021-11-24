@@ -8,7 +8,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 
 
-const stripe = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY)
+const stripe = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY)
 
 ReactDOM.render(
   <React.StrictMode>
