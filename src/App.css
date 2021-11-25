@@ -176,7 +176,7 @@ li {
 
 .Modal{
   position: fixed;
-  width: 70%;
+  width: 50%;
   height: auto;
   top: 50%;
   left: 50%;
@@ -193,4 +193,24 @@ li {
   border-style: ridge;
   background: linear-gradient(to bottom right,white, grey);
 
+}
+
+.BillingDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*align-items: center;*/
+  height: auto;
+}
+
+.BillingDetails input{
+  background-color: lightgrey;
+  border-style: hidden;
+  /*border-radius: 5px;*/
+  margin-top: 10px;
+  width: 33%;
+}
+
+.closeModal{
+  float: right;
 }
