@@ -207,10 +207,17 @@ li {
   background-color: lightgrey;
   border-style: hidden;
   /*border-radius: 5px;*/
-  margin-top: 10px;
+  margin: 5px;
   width: 33%;
 }
 
 .closeModal{
+  float: right;
+}
+
+#submitPayment{
+  margin: 20px;
+  padding: 5px;
+  width: fit-content;
   float: right;
 }

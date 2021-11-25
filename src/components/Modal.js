@@ -36,7 +36,7 @@ export default function Modal( {display, handleClose, children}){
         <div className={displayOrNotDisplay}>
             <button className="closeModal" onClick={handleClose}>Close</button>
             <h2>Payment Details</h2>
-            <BillingDetails billingDetails={billingDetails} onChangeInput={handleOnChangeInput} />
+            <BillingDetails billingDetails={billingDetails} onChangeInput={handleOnChangeInput} paymentDisabled={paymentDisabled} />
             
         </div>
     )
