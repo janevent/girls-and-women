@@ -1,6 +1,8 @@
 import React from 'react';
 import {useState} from 'react';
 
+import robin from "./robin-kutesa-unsplash.jpg";
+import element5 from "./element5-digital-unsplash.jpg";
 import challenges from '../info/challenges.js';
 import solutions from '../info/solutions.js';
 import points from '../info/points.js';
@@ -21,14 +23,14 @@ export default function Description(){
                 <p>{paragraph1}</p>
             </div>
             <div className="description-div">
-                <img src="../photos/robin-kutesa-unsplash.jpg" alt="water droplet on leaves" />
+                <img src={robin} alt="water droplet on leaves" width="900px" height="auto" />
             </div>
             <div className="description-div">
                 <h2>Solutions</h2>
                 <p>{paragraph2}</p>
             </div>
             <div className="description-div">
-                <img src="../photos/element5-digital-unsplash.jpg" alt="stack of books with an apple on top" />
+                <img src={element5} alt="stack of books with an apple on top"  width="800px" height="auto" />
             </div>
             <div className="objectives">
                 <h2> Campaign Objectives </h2>

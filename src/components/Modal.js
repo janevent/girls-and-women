@@ -32,6 +32,7 @@ export default function Modal( {display, handleClose, children}){
     const handleSubmitPayment = () => {
         setPaymentDisabled(true)
         console.log('submit payment', billingDetails)
+        //push history to success page
     }
 
     return(
