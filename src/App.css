@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.App h1{
+  font-family: 'Noto Serif', serif;
+
+  color: rgb(5, 97, 150);
+  color: rgb(195, 242, 250);
 }
 
 .App-logo {
@@ -22,8 +30,8 @@
   align-items: center;
   justify-content: center;
   /*font-size: calc(10px + 2vmin);*/
-  font-size: 1.5em;
-  font-weight: 100;
+  font-size: 2em;
+  font-weight: 300;
   color: rgb(195, 242, 250);
   border-radius: 0 0 0 90%/ 0 0 0 90%;
   border-bottom-style: ridge;
@@ -203,13 +211,16 @@ li {
   height: auto;
 }
 
-.BillingDetails input{
+.BillingDetails input, .card-input {
   background-color: lightgrey;
   border-style: hidden;
   /*border-radius: 5px;*/
-  margin: 5px;
+  margin: .5em;
+  padding: 13m;
   width: 33%;
 }
+
+
 
 .closeModal{
   float: right;
@@ -220,4 +231,14 @@ li {
   padding: 5px;
   width: fit-content;
   float: right;
+}
+
+.Description{
+  display: flex;
+  flex-direction: column;
+}
+
+.Description div{
+  margin: 20px;
+  padding: 20px;
 }

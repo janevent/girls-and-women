@@ -16,13 +16,19 @@ export default function Description(){
 
     return (
         <div className="Description">
-            <div>
+            <div className="description-div">
                 <h2>Challenges</h2>
                 <p>{paragraph1}</p>
             </div>
-            <div>
+            <div className="description-div">
+                <img src="../photos/robin-kutesa-unsplash.jpg" alt="water droplet on leaves" />
+            </div>
+            <div className="description-div">
                 <h2>Solutions</h2>
                 <p>{paragraph2}</p>
+            </div>
+            <div className="description-div">
+                <img src="../photos/element5-digital-unsplash.jpg" alt="stack of books with an apple on top" />
             </div>
             <div className="objectives">
                 <h2> Campaign Objectives </h2>

@@ -22,21 +22,23 @@ export default function Modal( {display, handleClose, children}){
 
         let cardDetails = stripeElements.getElement(CardElement)
         console.log(cardDetails)
+        console.log('invalid', cardDetails._invalid)
 
         Object.values(billingDetails).some( (deet) => deet === "") || cardDetails._invalid ? setPaymentDisabled(true) : setPaymentDisabled(false)
         //_invalid
         //_empty
     }
 
-    const handlePaymentDisabled = (event) => {
-
+    const handleSubmitPayment = () => {
+        setPaymentDisabled(true)
+        console.log('submit payment', billingDetails)
     }
 
     return(
         <div className={displayOrNotDisplay}>
             <button className="closeModal" onClick={handleClose}>Close</button>
             <h2>Payment Details</h2>
-            <BillingDetails billingDetails={billingDetails} onChangeInput={handleOnChangeInput} paymentDisabled={paymentDisabled} />
+            <BillingDetails billingDetails={billingDetails} onChangeInput={handleOnChangeInput} paymentDisabled={paymentDisabled} submitPayment={handleSubmitPayment} />
             
         </div>
     )

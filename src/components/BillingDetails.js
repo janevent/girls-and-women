@@ -2,7 +2,7 @@ import { CardElement } from '@stripe/react-stripe-js';
 import React from 'react';
 import { useState } from 'react';
 
-export default function BillingDetails({billingDetails, onChangeInput, paymentDisabled}){
+export default function BillingDetails( {billingDetails, onChangeInput, paymentDisabled, submitPayment} ){
 
     const {name, email} = billingDetails
 
@@ -25,8 +25,8 @@ export default function BillingDetails({billingDetails, onChangeInput, paymentDi
         <div className="BillingDetails">
             <input onChange={onChangeInput} type="text"name="name" placeholder="Full Name" value={name}/>
             <input onChange={onChangeInput} type="text" placeholder="Email" name="email" value={email}/>
-            <CardElement options={cardElOptions} onChange={onChangeInput} /> 
-            <button type="button" name="submit-payment" id="submitPayment" disabled={buttonDisabled} >Submit Payment</button>
+            <div className="card-input">< CardElement options={cardElOptions} onChange={onChangeInput} /> </div>
+            <button type="button" name="submit-payment" id="submitPayment" disabled={buttonDisabled} onClick={submitPayment}>Submit Payment</button>
         </div>
     )
 }
