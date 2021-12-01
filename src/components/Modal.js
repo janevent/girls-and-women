@@ -3,7 +3,7 @@ import { useElements, Elements, CardElement } from '@stripe/react-stripe-js';
 
 import { useState } from 'react';
 
-export default function Modal( {display, handleClose, children}){
+export default function Modal( {display, handleClose, amount}){
 
     const [billingDetails, setBillingDetails] = useState(
     {name: "", email: ""} )
@@ -29,9 +29,18 @@ export default function Modal( {display, handleClose, children}){
         //_empty
     }
 
-    const handleSubmitPayment = () => {
+    const handleSubmitPayment = async () => {
         setPaymentDisabled(true)
         console.log('submit payment', billingDetails)
+        const createPaymentIntent = await fetch('/netlify/functions/create-payment-intent', {
+            method: 'POST',
+            body: JSON.stringify({ amount })
+        }
+        )
+        const paymentIntentDetails = await createPaymentIntent.json();
+
+        const clientSecret = paymentIntentDetails.paymentIntent.client_secret
+
         //push history to success page
     }
 
