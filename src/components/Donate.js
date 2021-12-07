@@ -44,7 +44,7 @@ export default function Donate(props){
     return (
         <div className="Donate" >   
             <Amount amount={amount} onSubmitAmount={onSubmitAmount} onIncreaseAmount={onIncreaseAmount} onDecreaseAmount={onDecreaseAmount}></Amount>   
-            <Modal handleClose={handleClose} display={display} children={children} amount={amount} />
+            <Modal handleClose={handleClose} display={display} handleDisplay={props.handleDisplay} children={children} amount={amount} />
         </div>
     )
 }

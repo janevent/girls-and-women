@@ -5,9 +5,10 @@
 
 .App h1{
   font-family: 'Noto Serif', serif;
-
-  color: rgb(5, 97, 150);
-  color: rgb(195, 242, 250);
+  /*color: rgb(5, 97, 150);*/
+  color: white;
+  /*rgb(195, 242, 250);*/
+  text-shadow: -1px -1px 0 rgba(96, 229, 247, 0.35), 1px -1px 0 rgb(6, 43, 255), -1px 1px 0 rgb(6, 43, 255), 1px 1px 0 rgb(6, 43, 255) ;
 }
 
 .App-logo {
@@ -74,13 +75,14 @@
   border-top-color: rgba(96, 229, 247, 0.35);
   border-radius: 90% 0 0 0/ 90% 0 0 0;
   border-width: 20px;
-  background: linear-gradient(to bottom left,rgb(9, 253, 82), skyblue);
+  background: skyblue;
+  /*linear-gradient(to bottom left,rgb(9, 253, 82), skyblue);*/
 }
 
 .Amount p {
   font-size: 2em;
-  font-weight: 500;
-  color: steelblue;
+  font-weight: 2px;
+  color: rgb(6, 43, 255);
 }
 
 /*.Amount button{
@@ -118,7 +120,7 @@ li {
 
 .link {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.5em;
   color: rgb(6, 240, 45);
   padding: 10px;
@@ -134,7 +136,7 @@ li {
 }
 
 .arrow {
-  border: solid steelblue;
+  border: solid rgb(6, 43, 255);
   border-width: 0 4px 4px 0;
   display: inline-block;
   padding: 5px;
@@ -152,26 +154,33 @@ li {
 
 .increase, .decrease {
   border-radius: 50%;
-  border-width: 4px;
-  border-color: steelblue;
-  background: linear-gradient(to bottom right, lightblue, white);
+  border-width: 2px;
+  border-color: rgb(6, 43, 255);
+  /*rgb(89, 174, 243);
+  /*background: linear-gradient(to bottom right, lightblue, white);*/
+  background: transparent;
 }
 
 .Amount{
-  color: steelblue;
+  color: rgb(6, 43, 255);;
   font-size:  1.5em;
+  padding-top: 100px;
+  border-width: 2px;
 }
 
 .submitAmount {
-  border-style: ridge;
+  border-style: solid;
   border-radius: 10px;
-  border-width: 4px;
-  border-color: steelblue;
-  background: linear-gradient(to bottom right, lightblue, white);
-  padding: 5px;
-  font-weight: bold;
+  border-width: 2px;
+  border-color: rgb(6, 43, 255);
+  /*rgb(89, 174, 243);
+  /*background: linear-gradient(to bottom right, lightblue, white);*/
+  background: transparent;
+  padding: 10px;
+  color:rgb(6, 43, 255);
+  
   font-size: 1.25em;
-  color: steelblue;
+  /*color: steelblue;*/
 }
 
 .display-block{
@@ -190,16 +199,19 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   
-  border-radius: 10px;
+  border-radius: 5%;
   background: white;
   padding: 20px;
 }
 
 .Modal button{
-  border-radius: 5px;
+  border-radius: 5%;
   font-size: 1.5;
   border-style: ridge;
-  background: linear-gradient(to bottom right,white, grey);
+  color:rgba(96, 229, 247, 0.5);
+  border-color: rgba(96, 229, 247);
+  border-width: 2px;
+  background: linear-gradient(to bottom right,white, lightskyblue);
 
 }
 
@@ -217,7 +229,12 @@ li {
   /*border-radius: 5px;*/
   margin: .5em;
   padding: 13m;
-  width: 33%;
+  width: 50%;
+}
+
+.SuccessModal {
+  margin: 20px;
+  padding: 75px;
 }
 
 
