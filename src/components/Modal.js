@@ -10,7 +10,7 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
     const [billingDetails, setBillingDetails] = useState(
     {name: "", email: ""} )
     const [paymentDisabled, setPaymentDisabled] = useState(true);
-    const [error, setError] = useState("")
+    const [err, setErr] = useState("")
     const [successfulPayment, setSuccessfulPayment] = useState(false)
 
     const stripeElements = useElements();
@@ -28,7 +28,7 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
         target && setBillingDetails( { ...billingDetails, [target.name]: target.value} )
 
         let cardDetails = stripeElements.getElement(CardElement)
-        console.log(cardDetails)
+        //console.log(cardDetails)
         console.log('invalid', cardDetails._invalid)
 
         Object.values(billingDetails).some( (deet) => deet === "") || cardDetails._invalid ? setPaymentDisabled(true) : setPaymentDisabled(false)
@@ -37,6 +37,7 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
     }
 
     const handleSubmitPayment = async () => {
+        //what to say if form is incomplete
         setPaymentDisabled(true)
         console.log('submit payment', billingDetails)
 
@@ -52,6 +53,7 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
         }
         )
         const paymentIntentDetails = await createPaymentIntent.json();
+        //how to handle 500 internal server error
 
         const clientSecret = paymentIntentDetails.paymentIntent.client_secret
         console.log(paymentIntentDetails.paymentIntent)
@@ -72,8 +74,11 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
         })
 
         if(error){
-            setError(error.message)
+            setErr(error.message)
             console.log('error', error)
+            alert(error.message)
+            //perhaps setPaymentDisabled to false
+            setPaymentDisabled(false)
             return
         }
 
@@ -87,7 +92,11 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
         )
             //show spinner, and error if there is
         if(result.error){
-            setError(result.error)
+            setErr(result.error)
+            alert(result.error)
+            console.log(err)
+            //set payment disabled to false
+            setPaymentDisabled(false)
             return
         }
 
@@ -103,9 +112,9 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
 
     return(
         <div className={displayOrNotDisplay}>
-            <button className="closeModal" onClick={handleClose}>Close</button>
+            <div className="closeButtonContainer"><button className="closeModal" onClick={handleClose}>Close</button></div>
             <h2>Payment Details</h2>
-            <BillingDetails billingDetails={billingDetails} onChangeInput={handleOnChangeInput} paymentDisabled={paymentDisabled} submitPayment={handleSubmitPayment} />
+            <BillingDetails billingDetails={billingDetails} onChangeInput={handleOnChangeInput} paymentDisabled={paymentDisabled} submitPayment={handleSubmitPayment} handleDisplay={handleDisplay} />
             
         </div>
     )

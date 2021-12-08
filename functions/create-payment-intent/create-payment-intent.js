@@ -29,6 +29,7 @@ const handler = async (event) => {
       // isBase64Encoded: true,
     }
   } catch (error) {
+    //not to string?
     return { statusCode: 500, body: error.toString() }
   }
 }

@@ -29,7 +29,10 @@ export default function Donate(props){
     }
 
     const handleClose = () => {
+        console.log('handle close function')
+        
         setDisplay(false)
+        console.log(display)
     }
     const onIncreaseAmount = () => {
         setAmount(amount+5)

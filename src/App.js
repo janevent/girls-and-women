@@ -4,6 +4,8 @@ import NavigationBar from './components/NavigationBar';
 import Description from './components/Description';
 import Donate from './components/Donate';
 import SuccessModal from './components/SuccessModal';
+import Footer from './components/Footer';
+
 import { useState} from 'react';
 
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
@@ -22,7 +24,7 @@ function App() {
       <header className="App-header">
         <section className="inner-header">  
           <section className="inner-header-1">
-            <h1>Menstrual Hygiene Campaign in Africa</h1>
+            <h1>Menstrual Hygiene Management Campaign</h1>
           </section>
         </section>
         
@@ -36,7 +38,7 @@ function App() {
                 <Description/>
             </Route> 
             <Route path="/success">
-                {displaySuccess ? <SuccessModal/> : "" }
+                {displaySuccess ? <SuccessModal/> : <Description/> }
               </Route>
             <Route path="/">
                 <Donate handleDisplay={handleSetDisplaySuccess} />
@@ -44,6 +46,7 @@ function App() {
           </Switch>
         </Router>
       </div>
+      <Footer/>
     </div>
   );
 }

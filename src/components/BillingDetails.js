@@ -15,7 +15,8 @@ export default function BillingDetails( {billingDetails, onChangeInput, paymentD
                 iconColor: "darkred"
             },
             base: {
-                backgroundColor: "lightgrey",
+                backgroundColor: "lightgrey"
+                
             
             }
         },
@@ -23,6 +24,7 @@ export default function BillingDetails( {billingDetails, onChangeInput, paymentD
     }
     return(
         <div className="BillingDetails">
+            
             <input onChange={onChangeInput} type="text"name="name" placeholder="Full Name" value={name}/>
             <input onChange={onChangeInput} type="text" placeholder="Email" name="email" value={email}/>
             <div className="card-input">< CardElement options={cardElOptions} onChange={onChangeInput} /> </div>

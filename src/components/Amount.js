@@ -9,7 +9,7 @@ export default function Amount({amount, onIncreaseAmount, onSubmitAmount, onDecr
         <div className="Amount">
             <h2>Amount To Donate</h2>
             <button type="button" className="increase" onClick={onIncreaseAmount}><p className="arrow up"></p></button>
-            <p>{amount}</p>
+            <p>CAD $ {amount}</p>
             <button type="button" className="decrease" onClick={onDecreaseAmount}><p className="arrow down"></p></button>
             <br></br>
             <br></br>

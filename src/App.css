@@ -64,8 +64,13 @@
   
   border-width: 6px;
  /* border-block-end-style: ridge;*/
-  padding: 5px 175px 50px 175px;
+  padding: 5px 150px 50px 150px;
   border-radius: 0 0 100% 100%/ 0 0 100% 100%;
+}
+
+.main {
+  background-color: lightseagreen;
+  padding-bottom: 40px;
 }
 
 .Donate {
@@ -73,7 +78,7 @@
   margin-top: 40px;
   border-block-start-style: ridge;
   border-top-color: rgba(96, 229, 247, 0.35);
-  border-radius: 90% 0 0 0/ 90% 0 0 0;
+  border-radius: 90% 30% 0 0/ 90% 5% 0 0;
   border-width: 20px;
   background: skyblue;
   /*linear-gradient(to bottom left,rgb(9, 253, 82), skyblue);*/
@@ -135,6 +140,7 @@ li {
   border-radius: -50% -50% 0 0/ -50% -50% 0 0;
 }
 
+/*Donate and Amount*/
 .arrow {
   border: solid rgb(6, 43, 255);
   border-width: 0 4px 4px 0;
@@ -183,6 +189,8 @@ li {
   /*color: steelblue;*/
 }
 
+/*Modal And Billing Details*/
+
 .display-block{
   display: block;
 }
@@ -193,54 +201,65 @@ li {
 
 .Modal{
   position: fixed;
-  width: 50%;
+  width: 45%;
   height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  border-radius: 5%;
+  color: rgb(6, 43, 255);
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(6, 43, 255);
+  border-radius: 20px;
   background: white;
   padding: 20px;
+  /*display: flex;
+  flex-direction: column;*/
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .Modal button{
-  border-radius: 5%;
-  font-size: 1.5;
-  border-style: ridge;
-  color:rgba(96, 229, 247, 0.5);
-  border-color: rgba(96, 229, 247);
-  border-width: 2px;
-  background: linear-gradient(to bottom right,white, lightskyblue);
+  border-radius: 10px;
+  font-size: 1em;
+  border-style: solid;
+  color: rgb(6, 43, 255);
+  border-color: rgb(6, 43, 255);
+  border-width: 1px;
+  background: transparent;
+  /*linear-gradient(to bottom right,white, lightskyblue);*/
 
 }
 
 .BillingDetails {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*align-items: left;*/
+  width: 80%;
+  /*justify-content: center;
+  text-align: center;
   /*align-items: center;*/
   height: auto;
 }
 
 .BillingDetails input, .card-input {
   background-color: lightgrey;
-  border-style: hidden;
-  /*border-radius: 5px;*/
+  border-style: solid;
+  border-color: rgb(6, 43, 255);
+  border-width: 1px;
+  border-radius: 5px;
   margin: .5em;
-  padding: 13m;
+  padding: .5em;
   width: 50%;
 }
 
-.SuccessModal {
-  margin: 20px;
-  padding: 75px;
-}
-
-
-
 .closeModal{
   float: right;
+}
+
+.closeButtonContainer{
+  width: 100%;
 }
 
 #submitPayment{
@@ -253,9 +272,37 @@ li {
 .Description{
   display: flex;
   flex-direction: column;
+  padding: 25px;
+  background-color: white;
+  margin: 50px;
+  
 }
 
 .Description div{
   margin: 20px;
   padding: 20px;
+}
+
+.Footer {
+  color: rgb(6, 240, 45);
+  font-weight: 800;
+  font-size: 1em;
+  
+}
+
+.SuccessModal{
+  color: rgb(6, 43, 255);
+  background-color: white;
+  border-style: solid;
+  border-color:  rgb(6, 43, 255);
+  border-width: 2px;
+  border-radius: 10px;
+  width: 30%;
+  /*top: 50%;
+  left: 50%;*/
+ transform: translate(70%, 0%);
+ top: 50%;
+ left: 50%;
+ margin: 20px;
+ padding: 75px;
 }

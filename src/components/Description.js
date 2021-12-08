@@ -39,6 +39,7 @@ export default function Description(){
                 </ul>          
             </div>
             <div className="where">
+                <h2>Where</h2>
                 <p>This project will be implemented in the Buganda region located in Central Uganda on the
 shores of Lake Victoria.</p>
             </div>
