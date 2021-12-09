@@ -12,10 +12,10 @@
   /*text-shadow: -1px -1px 0 rgba(96, 229, 247, 0.35), 1px -1px 0 rgb(6, 43, 255), -1px 1px 0 rgb(6, 43, 255), 1px 1px 0 rgb(6, 43, 255) ;*/
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -114,8 +114,9 @@
 } */
 /*Description*/
 .description-p{
-  margin: 15px;
-  padding: 25px;  
+  margin: 10px;
+  padding-right: 25px;  
+  padding-left: 25px;
 }
 
 .description-p, .description-li {
