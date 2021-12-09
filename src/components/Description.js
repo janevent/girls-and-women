@@ -6,11 +6,13 @@ import element5 from "./element5-digital-unsplash.jpg";
 import challenges from '../info/challenges.js';
 import solutions from '../info/solutions.js';
 import points from '../info/points.js';
+import about from '../info/about.js';
 
 export default function Description(){
 
     
-    const [subTitle] = useState("Donations go to KAWEECHIPA");
+    const [subtitle] = useState("Donations go to KAWEECHIPA");
+    const [parAbout, updateParAbout] = useState(about)
     const [paragraph1, updateParagraph1] = useState(challenges);
     const [paragraph2, updateParagraph2] = useState(solutions);
     const [objectives, updateObjectives] = useState(points);
@@ -19,6 +21,19 @@ export default function Description(){
     return (
         <div className="Description">
             <div className="description-div">
+                <h2 className="description-title">
+                    Join KAWEECHIPA to educate, and provide essential sanitary pads to girls affected by poverty.
+                </h2>
+                <h4>{subtitle}</h4>
+            </div>
+            <div className="where">
+                <h2 className="description-title">Where</h2>
+                <p className="description-p">This project will be implemented in the Buganda region located in Central Uganda on the
+shores of Lake Victoria.</p>
+            </div>
+            <div className="description-div">
+                <h2 className="description-title">About Campaign</h2>
+                <p className="description-p">{parAbout}</p>
             </div>
             <div className="description-div">
                 <h2 className="description-title">Challenges</h2>

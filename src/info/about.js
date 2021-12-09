@@ -1,0 +1,5 @@
+import React from 'react';
+
+let about = "Menstruation is a life-restricting monthly event for girls and women across Uganda and negatively impacts on daily activities and self-esteem. There is great need countrywide to empower and educate especially girls so that they are increasingly positive about their periods and are able to stay in school during their periods. \nMenstruation is a sign of a woman’s health and fertility, yet it is surrounded by shame, secrecy, humiliation, fear, taboo, stigma and embarrassment. The women and girls without access to the water, toilets, materials, disposal facilities, privacy and information they need to manage their menstruation safely and with dignity suffer most.\n Menstrual Hygiene campaign will serve as a neutral platform to bring together the media to create a united and strong voice for vulnerable girls in school, helping to break the silence around menstrual hygiene management. This campaign will be earmarked for reflection on key menstrual concerns and to rally action for the promotion of menstrual hygiene."
+
+export default about;
