@@ -4,11 +4,12 @@
 }
 
 .App h1{
-  font-family: 'Noto Serif', serif;
+  /*font-family: 'Noto Serif', serif;*/
   /*color: rgb(5, 97, 150);*/
-  color: white;
+  color: darkblue;
+  font-size: 1.5em;
   /*rgb(195, 242, 250);*/
-  text-shadow: -1px -1px 0 rgba(96, 229, 247, 0.35), 1px -1px 0 rgb(6, 43, 255), -1px 1px 0 rgb(6, 43, 255), 1px 1px 0 rgb(6, 43, 255) ;
+  /*text-shadow: -1px -1px 0 rgba(96, 229, 247, 0.35), 1px -1px 0 rgb(6, 43, 255), -1px 1px 0 rgb(6, 43, 255), 1px 1px 0 rgb(6, 43, 255) ;*/
 }
 
 .App-logo {
@@ -16,11 +17,11 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
-}
+  } */
+
 
 .App-header {
   background: linear-gradient(to bottom, lightseagreen, rgb(9, 253, 82) );
@@ -61,11 +62,14 @@
 .inner-header-1 {
   border-bottom-color: rgba(96, 229, 247, 0.35);
   border-right-color: rgba(96, 229, 247, 0.35);
-  
-  border-width: 6px;
+  /*border-bottom-style: ridge;*/
+  /*border-right-style: ridge;*/
+  border-width: 20px;
  /* border-block-end-style: ridge;*/
-  padding: 5px 150px 50px 150px;
-  border-radius: 0 0 100% 100%/ 0 0 100% 100%;
+  /*padding: 5px 100px 50px 100px;*/
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 0 100% 100% 100%/ 0 100% 100% 100%;
 }
 
 .main {
@@ -78,7 +82,7 @@
   margin-top: 40px;
   border-block-start-style: ridge;
   border-top-color: rgba(96, 229, 247, 0.35);
-  border-radius: 90% 30% 0 0/ 90% 5% 0 0;
+  border-radius: 90% 90% 0 0/ 90% 90% 0 0;
   border-width: 20px;
   background: skyblue;
   /*linear-gradient(to bottom left,rgb(9, 253, 82), skyblue);*/
@@ -108,21 +112,30 @@
     transform: rotate(360deg);
   }
 } */
-
-p{
+/*Description*/
+.description-p{
   margin: 15px;
   padding: 25px;  
 }
 
-ul, .objectives {
-  text-align: center;
+.description-p, .description-li {
+  font-size: 1.25em;
+  font-weight: 550;
+}
+
+ul{
+  text-align: left;
   margin: auto;
 }
 
-li {
-  list-style-type: none;
+.description-title{
+  font-size: 2.5em;
 }
 
+/*li {
+  list-style-type: none;
+}*/
+/*NavigationBar*/
 .link {
   text-decoration: none;
   font-weight: 700;
@@ -145,7 +158,7 @@ li {
   border: solid rgb(6, 43, 255);
   border-width: 0 4px 4px 0;
   display: inline-block;
-  padding: 5px;
+  padding: 10px;
 }
 
 .up {
@@ -162,6 +175,8 @@ li {
   border-radius: 50%;
   border-width: 2px;
   border-color: rgb(6, 43, 255);
+  width: 80px;
+  height: 80px;
   /*rgb(89, 174, 243);
   /*background: linear-gradient(to bottom right, lightblue, white);*/
   background: transparent;
