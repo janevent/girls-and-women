@@ -22,9 +22,9 @@ export default function Description(){
         <div className="Description">
             <div className="description-div">
                 <h2 className="description-title">
-                    Join KAWEECHIPA to educate, and provide essential sanitary pads to girls affected by poverty.
+                    Join KAWEECHIPA to educate, and provide essential sanitary pads to girls affected by poverty in Uganda, Africa.
                 </h2>
-                <h4>{subtitle}</h4>
+                <h3>{subtitle}</h3>
             </div>
             <div className="where">
                 <h2 className="description-title">Where</h2>
@@ -33,32 +33,27 @@ shores of Lake Victoria.</p>
             </div>
             <div className="description-div">
                 <h2 className="description-title">About Campaign</h2>
-                <p className="description-p">{parAbout}</p>
+                {parAbout.map((par) => <p className="description-p">{par}</p>) }
             </div>
             <div className="description-div">
                 <h2 className="description-title">Challenges</h2>
                 <p className="description-p">{paragraph1}</p>
             </div>
             <div className="description-div">
-                <img src={robin} alt="water droplet on leaves" width="900px" height="auto" />
+                <img src={robin} alt="water droplet on leaves" height="auto" />
             </div>
             <div className="description-div">
                 <h2 className="description-title">Solutions</h2>
                 <p className="description-p">{paragraph2}</p>
             </div>
             <div className="description-div">
-                <img src={element5} alt="stack of books with an apple on top"  width="800px" height="auto" />
+                <img src={element5} alt="stack of books with an apple on top"   height="auto" />
             </div>
             <div className="objectives">
                 <h2 className="description-title"> Campaign Objectives </h2>
                 <ul>
                     {objectives.map(ob => <li className="description-li">{ob}</li>)}
                 </ul>          
-            </div>
-            <div className="where">
-                <h2 className="description-title">Where</h2>
-                <p className="description-p">This project will be implemented in the Buganda region located in Central Uganda on the
-shores of Lake Victoria.</p>
             </div>
         </div>
     )
