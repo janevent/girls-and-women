@@ -24,7 +24,7 @@ export default function Description(){
                 <h2 className="description-title">
                     Join KAWEECHIPA to educate, and provide essential sanitary pads to girls affected by poverty in Uganda, Africa.
                 </h2>
-                <h3>{subtitle}</h3>
+                <h3 className="subtitle">{subtitle}</h3>
             </div>
             <div className="where">
                 <h2 className="description-title">Where</h2>
