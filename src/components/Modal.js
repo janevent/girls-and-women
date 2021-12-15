@@ -12,6 +12,7 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
     const [paymentDisabled, setPaymentDisabled] = useState(true);
     const [err, setErr] = useState("")
     const [successfulPayment, setSuccessfulPayment] = useState(false)
+    const [cardRef, setCardRef] = useState(null)
 
     const stripeElements = useElements();
 
@@ -92,9 +93,12 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
         )
             //show spinner, and error if there is
         if(result.error){
-            setErr(result.error)
-            alert(result.error)
-            console.log(err)
+            await setErr(result.error.message)
+            console.log('result error', result.error)
+            console.log('message', result.error.message)
+            console.log('err', err)
+            alert(result.error.message)
+            
             //set payment disabled to false
             setPaymentDisabled(false)
             return
@@ -107,14 +111,19 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
        //updateDisplay function
        handleClose()
        handleDisplay(true)
+       clearInputs()
        history.push('/success')
     }
-
+    //in handleSubmitPayment and handleClose clear card ref
+    const clearInputs = () => {
+        setBillingDetails({name: "", email: ""})
+        cardRef.clear()
+    }
     return(
         <div className={displayOrNotDisplay}>
-            <div className="closeButtonContainer"><button className="closeModal" onClick={handleClose}>Close</button></div>
+            <div className="closeButtonContainer"><button className="closeModal" onClick={clearInputs} onClickCapture={handleClose} >Close</button></div>
             <h2>Payment Details</h2>
-            <BillingDetails billingDetails={billingDetails} onChangeInput={handleOnChangeInput} paymentDisabled={paymentDisabled} submitPayment={handleSubmitPayment} handleDisplay={handleDisplay} />
+            <BillingDetails billingDetails={billingDetails} onChangeInput={handleOnChangeInput} paymentDisabled={paymentDisabled} submitPayment={handleSubmitPayment} handleDisplay={handleDisplay} setCardRef={setCardRef}/>
             
         </div>
     )
