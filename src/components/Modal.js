@@ -51,16 +51,26 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
                 'Content-Type': 'authorization/json'
             },
             body: JSON.stringify({ amount: thisAmount, receipt_email: email })
+        })
+        // .catch((error) => {
+        //     console.log(error)
+        //     Console.alert('Error: Payment Not Processed')
+        //     return
+        // })
+        console.log('createPaymentIntent:', createPaymentIntent)
+        if(createPaymentIntent.status >= 400 && createPaymentIntent.status < 600){
+            alert("Bad response from server. Payment not processed ")
+            return
         }
-        )
         const paymentIntentDetails = await createPaymentIntent.json();
+        console.log('response', paymentIntentDetails)
+        
         //how to handle 500 internal server error
+        
 
         const clientSecret = paymentIntentDetails.paymentIntent.client_secret
-        console.log(paymentIntentDetails.paymentIntent)
-        console.log('cs', clientSecret)
-
-    
+        //console.log(paymentIntentDetails.paymentIntent)
+        //console.log('cs', clientSecret)    
         const formattedBillingDetails = {
                 name: billingDetails.name,
                 email: billingDetails.email

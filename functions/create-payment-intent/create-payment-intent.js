@@ -30,7 +30,7 @@ const handler = async (event) => {
     }
   } catch (error) {
     //not to string?
-    return { statusCode: 500, body: error.toString() }
+    return { status: 500, body: error.toString() }
   }
 }
 
