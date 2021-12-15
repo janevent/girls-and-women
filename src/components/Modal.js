@@ -59,7 +59,8 @@ export default function Modal( {display, handleClose, amount, handleDisplay}){
         // })
         console.log('createPaymentIntent:', createPaymentIntent)
         if(createPaymentIntent.status >= 400 && createPaymentIntent.status < 600){
-            alert("Bad response from server. Payment not processed.")
+            alert("Something went wrong. Payment not processed.")
+            setPaymentDisabled(false)
             return
         }
         const paymentIntentDetails = await createPaymentIntent.json();
